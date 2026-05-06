@@ -180,18 +180,7 @@ div[role="menuitem"] {
   color: #fff;
 }
 /* Hide the top toolbar (deploy button, etc.) but keep the header for the sidebar toggle */
-div[data-testid="stToolbar"] {
-    display: none !important;
-}
-
-/* Hide the header background/decoration but NOT the toggle button */
-header[data-testid="stHeader"] {
-    background-color: rgba(0,0,0,0) !important; /* Make it transparent */
-    border: none !important;
-}
-
-/* Ensure the toggle button itself remains visible */
-button[data-testid="stBaseButton-headerNoPadding"] {
-    display: block !important;
-    color: white !important;
+/* Hides only the right-side toolbar icons (Deploy, Menu) but leaves the left toggle alone */
+div[data-testid="stStatusWidget"] {
+    visibility: hidden;
 }
